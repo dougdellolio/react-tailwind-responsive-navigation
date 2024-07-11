@@ -8,7 +8,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isSidebarOpen }) => {
   return (
     <nav className="bg-blue-600 p-4 flex justify-between items-center">
-      <div className="text-white text-2xl">My App</div>
+      <div className="text-white text-2xl">Logo</div>
       <button onClick={toggleSidebar} className="text-white lg:hidden">
         {isSidebarOpen ? 'Close' : 'Menu'}
       </button>
