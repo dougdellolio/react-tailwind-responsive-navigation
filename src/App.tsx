@@ -3,7 +3,7 @@ import './App.css'
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 
-const App: React.FC = () => {
+const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
