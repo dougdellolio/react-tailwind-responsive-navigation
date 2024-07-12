@@ -8,9 +8,14 @@ interface SidebarProps {
 const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
     return (
         <aside
-            className={`fixed top-0 left-0 h-full bg-gray-800 text-white transform ${isOpen ? 'w-64' : 'w-20'
+            className={`fixed top-0 left-0 h-full border-r border-gray-200 text-black transform ${isOpen ? 'w-64' : 'w-15'
                 } transition-width duration-300 ease-in-out`}
         >
+            <div className='flex items-center justify-center py-10'>
+                <div className="inline-flex">
+
+                </div>
+            </div>
             <ul className="p-4 space-y-4">
                 <li className="flex items-center">
                     <PiAcorn className="w-6 h-6" />
@@ -27,7 +32,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
             </ul>
             <button
                 onClick={toggleSidebar}
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-700 p-2 rounded-full"
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-2 rounded-full"
             >
                 {isOpen ? 'Collapse' : 'Expand'}
             </button>
