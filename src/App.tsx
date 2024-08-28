@@ -170,7 +170,12 @@ const App = () => {
                       {...register(`trades.${index}.field1`, { required: true})}
                       placeholder="Field 1"
                       className="border p-2 rounded w-full"
+                      
                     />
+
+{errors.trades && errors.trades[index]?.field1 && (
+            <span className="text-red-500">This field is required</span>
+          )}
                   </div>
                   <div className="mb-4">
                     <label className="block text-gray-700 font-medium mb-1">Field 2</label>
